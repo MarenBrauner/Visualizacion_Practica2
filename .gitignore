@@ -1,0 +1,14 @@
+# Entornos
+env/
+venv/
+practica2_visualizacion/
+
+# Python
+__pycache__/
+*.pyc
+
+# Dagster
+.dagster/
+
+# VSCode
+.vscode/
