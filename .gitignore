@@ -12,3 +12,5 @@ __pycache__/
 
 # VSCode
 .vscode/
+
+.tmp_dagster_home_*
