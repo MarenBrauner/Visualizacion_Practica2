@@ -62,7 +62,7 @@ def grafico_evolucion_islas(renta_clean):
     # Dagster puede devolver el gráfico o simplemente una confirmación
     return "Gráfico de líneas generado con éxito"
 
-
+# --- ASSETS DE CÓDIGOS ---
 @asset
 def codigos_geograficos():
     """Asset que carga y prepara el diccionario de municipios (Punto 6)"""
@@ -135,3 +135,73 @@ def grafico_distribucion_municipios(renta_municipios_unificada):
     # Guardamos el archivo físico
     grafico.save("grafico_barras_municipios.png", limitsize=False)
     return "Gráfico de distribución por municipios generado con éxito"
+
+
+# --- ASSETS DE ESTUDIOS ---
+
+@asset
+def estudios_raw():
+    """Carga del dataset de nivel de estudios"""
+    return pd.read_csv('nivelestudios.csv')
+
+@asset
+def estudios_unificados_islas(estudios_raw, codigos_geograficos):
+    """Limpieza de estudios y unión con la información de ISLA de codigos_geograficos"""
+    df_est = estudios_raw.copy()
+    
+    # 1. Limpieza y filtrado inicial
+    df_est = df_est[
+        (df_est['Sexo'].str.contains('Hombres|Mujeres', case=False, na=False)) & 
+        (df_est['Nivel de estudios en curso'] != 'Total') &
+        (df_est['Nivel de estudios en curso'] != 'No cursa estudios')
+    ].copy()
+    
+    # 2. Normalización del código de municipio (extraer primeros 5 caracteres)
+    df_est['COD_MUN'] = df_est.iloc[:, 0].astype(str).str.strip().str[:5]
+    
+    # 3. Preparación de códigos geográficos (asegurar coincidencia de tipos)
+    df_geo = codigos_geograficos.copy()
+    df_geo['COD_MUN'] = df_geo['COD_MUN'].astype(str).str.strip()
+    
+    # 4. Merge para obtener la columna 'ISLA'
+    df_unificado = pd.merge(df_est, df_geo[['COD_MUN', 'ISLA']], on='COD_MUN')
+    
+    # 5. Normalización del Año (extraer los dos últimos dígitos de 'Periodo')
+    df_unificado['Año'] = "20" + df_unificado['Periodo'].str.extract(r'(\d{2})$').iloc[:, 0]
+    
+    return df_unificado
+
+@asset
+def grafico_estudios_por_sexo(estudios_unificados_islas):
+    """Generación del gráfico de barras agrupadas por Año y Sexo (Hito 7)"""
+    df = estudios_unificados_islas
+    
+    if df.empty:
+        return "Error: No hay datos tras el merge para generar el gráfico"
+    
+    # Agrupación de los totales
+    df_plot = df.groupby(['Año', 'Sexo', 'ISLA'], as_index=False)['Total'].sum()
+    
+    grafico = (
+        ggplot(df_plot, aes(x='Año', y='Total', fill='Sexo'))
+        + geom_col(position='dodge')
+        + facet_wrap('~ISLA', scales='free_y')
+        + theme_minimal()
+        + scale_fill_manual(values=['#4C72B0', '#DD8452'])
+        + labs(
+            title="Evolución de Estudiantes por Año y Sexo",
+            subtitle="Análisis por Islas (2021-2023)",
+            x="Año", 
+            y="Nº de Estudiantes", 
+            fill="Sexo"
+        )
+        + theme(
+            figure_size=(14, 10), 
+            strip_text=element_text(size=10, face='bold'),
+            legend_position='bottom'
+        )
+    )
+    
+    # Guardado del archivo
+    grafico.save("grafico_barras_estudios_sexo.png")
+    return "Gráfico de distribución de estudios por sexo generado con éxito"
