@@ -6,9 +6,9 @@ def islas_raw():
     df = pd.read_csv("./data/pwbi-1.csv")
     #EJERCICIO 6
     # Añadimos una fila "sucia" para forzar el fallo del check
-    #fila_sucia = pd.DataFrame({"año": [2022], "isla": ["tenerife"], "medida": ["gasto"], "valor": [1840000]})
-    #return pd.concat([df, fila_sucia], ignore_index=True)
-    return df
+    fila_sucia = pd.DataFrame({"año": [2022], "isla": ["tenerife"], "medida": ["gasto"], "valor": [1840000]})
+    return pd.concat([df, fila_sucia], ignore_index=True)
+    #return df
 
 @asset_check(asset=islas_raw)
 def check_estandarizacion_islas(islas_raw):
