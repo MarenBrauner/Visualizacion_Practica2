@@ -5,7 +5,12 @@ from plotnine import *
 @asset
 def renta_raw():
     """Carga del dataset original"""
-    return pd.read_csv('distribucion-renta-canarias.csv')
+    df = pd.read_csv('distribucion-renta-canarias.csv')
+
+    # ROMPER CHECK: Descomentar la siguiente línea para romper check_nulos_numericos:
+    # df.loc[0, 'OBS_VALUE'] = None
+
+    return df
 
 @asset_check(asset=renta_raw)
 def check_nulos_numericos(renta_raw):
@@ -28,11 +33,11 @@ def check_nulos_numericos(renta_raw):
 @asset_check(asset=renta_raw)
 def check_estandarizacion_categorias(renta_raw):
     """Valida consistencia en Nombres de Islas (facetas) y Tipos de Renta (líneas)"""
-    # 1. Islas (Evitar "Tenerife " con espacio o "tenerife" en minúscula)
+    # Islas (Evitar "Tenerife " con espacio o "tenerife" en minúscula)
     originales_islas = int(renta_raw['TERRITORIO#es'].nunique())
     limpias_islas = int(renta_raw['TERRITORIO#es'].str.strip().str.capitalize().nunique())
     
-    # 2. Medidas (Asegurar que solo existen las categorías esperadas)
+    # Medidas (Asegurar que solo existen las categorías esperadas)
     esperadas = {'Sueldos y salarios', 'Pensiones', 'Prestaciones por desempleo', 'Rentas de actividades económicas', 'Otras prestaciones', 'Otros ingresos'}
     reales = set(renta_raw['MEDIDAS#es'].unique())
     diff = len(reales - esperadas)
@@ -53,7 +58,7 @@ def check_estandarizacion_categorias(renta_raw):
 def renta_clean(renta_raw):
     """Limpieza de datos: nulos, columnas extra y renombramiento"""
     df = renta_raw.copy()
-    
+
     # Limpieza de nulos en la columna de valor -> se puede mover arriba, antes del check
     df = df.dropna(subset=['OBS_VALUE'])
     
@@ -68,6 +73,12 @@ def renta_clean(renta_raw):
         'TERRITORIO_CODE': 'COD_MUN' # Preparar para pasos siguientes..
     })
     
+    # ROMPER CHECK: Descomentar la siguiente línea para romper check_cardinalidad_islas:
+    # df = df[df['TERRITORIO#es'] != 'Tenerife']
+
+    # ROMPER CHECK: Descomentar la siguiente línea para romper check_rangos_renta:
+    # df.loc[1, 'OBS_VALUE'] = 999.9 
+
     return df
 
 @asset_check(asset=renta_clean)
@@ -186,6 +197,9 @@ def codigos_geograficos():
     """Asset que carga y prepara el diccionario de municipios"""
     df_cods = pd.read_csv('codislas.csv', encoding='iso-8859-1', sep=';')
     
+    # ROMPER CHECK: Descomentar para romper check_integridad_codigos:
+    # df_cods.loc[0, 'CMUN'] = 99999999
+
     # Construcción del código de 5 dígitos
     df_cods['COD_MUN'] = (
         df_cods['CPRO'].astype(str).str.zfill(2) + 
@@ -351,6 +365,12 @@ def estudios_unificados_islas(estudios_raw, codigos_geograficos):
     # 5. Normalización del Año (extraer los dos últimos dígitos de 'Periodo')
     df_unificado['Año'] = "20" + df_unificado['Periodo'].str.extract(r'(\d{2})$').iloc[:, 0]
     
+    # ROMPER CHECK: Descomendar para romper check_consistencia_anos:
+    # df_unificado.loc[0, 'Año'] = "22"
+
+    # ROMPER CHECK: Descomendar para romper check_contraste_sexo:
+    # df_unificado = df_unificado[df_unificado['Sexo'] != 'Mujeres']
+
     return df_unificado
 
 @asset_check(asset=estudios_unificados_islas)
@@ -368,8 +388,6 @@ def check_integridad_merge_islas(estudios_unificados_islas):
             "impacto": "Registros sin isla no aparecerán en las facetas del gráfico."
         }
     )
-
-
 
 @asset_check(asset=estudios_unificados_islas)
 def check_consistencia_anos(estudios_unificados_islas):
@@ -404,7 +422,6 @@ def check_contraste_sexo(estudios_unificados_islas):
             "impacto": "Si falta una categoría en los datos, el contraste de color en el gráfico desaparece."
         }
     )
-
 
 @asset
 def grafico_estudios_por_sexo(estudios_unificados_islas):
