@@ -54,20 +54,19 @@ def generar_plot(df):
         "Devuelve exclusivamente el código Python."
     )
     descripcion_grafico = """
-    - Dataset: islas_raw
-    - Estéticas: 
-        * Variable 'año' mapeada al eje X.
-        * Variable 'valor' mapeada al eje Y.
-        * Una geometría de línea independiente para cada 'isla' (color/group).
-    - Geometría: Línea (geom_line).
-    - Etiquetas: 
-        * Título: 'Evolución del Gasto por Isla'.
-        * Eje Y: 'Gasto en €'.
-    - Principio Gestalt (Punto Focal): 
-        * Resaltar 'Tenerife'.
-        * Resto de islas en gris claro (#D3D3D3).
-        * Usar scale_color_manual para definir estos colores.
-    )
+    - Dataset: df (islas_raw).
+    - Preprocesamiento: 
+        1. Convertir la columna 'año' a entero (.astype(int)).
+        2. Agrupar por 'año' e 'isla' y sumar 'valor'.
+    - Estéticas (aes): x='año', y='valor', color='isla', group='isla'.
+    - Geometría: geom_line(size=1.5) + geom_point(size=3).
+    - Control de Ejes y Colores (Gestalt): 
+        * Usa scale_x_continuous(breaks=[2020, 2021, 2022]) para evitar decimales.
+        * Usa scale_color_manual(values={'Tenerife': '#E63946', 'Gran Canaria': '#BDC3C7'}) para asegurar que el rojo sea para Tenerife.
+    - Estilo: 
+        Usa theme_minimal() (MUY IMPORTANTE: el nombre exacto es theme_minimal). 
+        Añade + theme(panel_grid_minor=element_blank()) para limpiar el fondo.
+    - Etiquetas: Título 'Gasto: Tenerife vs Gran Canaria', x='Año', y='Total (€)', color='Isla'.
     """
 
     user_content = f"Basándote en esta descripción, completa el template:\n{descripcion_grafico}"
@@ -97,17 +96,25 @@ def codigo_generado_ia(context, template_ia):
 
 
         match = re.search(r"```python\s+(.*?)\s+```", codigo_raw, re.DOTALL)
-    
-        if match:
-            codigo_limpio = match.group(1)
-        else:
-        # Si no hay bloques de código, intentamos quitar manualmente las líneas de Markdown
-            lineas_validas = codigo_raw.split("\n")
 
-        codigo_final = "\n".join(lineas_validas)
+
+        if match:
+            codigo_final = match.group(1)
+        else:
+            codigo_final = "\n".join(codigo_raw.split("\n"))
+
+        codigo_final = codigo_final.strip()
+
+        # if match:
+        #     codigo_limpio = match.group(1)
+        # else:
+        # Si no hay bloques de código, intentamos quitar manualmente las líneas de Markdown
+        #     lineas_validas = codigo_raw.split("\n")
+
+        #     codigo_final = "\n".join(lineas_validas)
 
     # 3. Limpieza final de espacios en blanco
-        codigo_final = codigo_final.strip()
+        # codigo_final = codigo_final.strip()
 
         return Output(
             value=codigo_final,
