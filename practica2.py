@@ -817,11 +817,6 @@ def vis_mapa_renta_ia(prompt_mapa_renta, renta_municipios_unificada, geometria_c
     return "OK"
 
 
-
-
-
-
-
 # --- Despliegue automático en GitHub ---
 
 @asset(deps=["vis_estudios_sexo", "vis_barras_municipios", "vis_lineas_renta", "vis_mapa_renta_ia"])
@@ -859,3 +854,33 @@ def publicar_a_github():
         
     except subprocess.CalledProcessError as e:
         return f"Error en la automatización de Git: {e}"
+
+
+# --- Implementación de un Sensor ---
+from dagster import AssetSelection, define_asset_job, sensor, RunRequest
+import os
+
+# 1. Definimos el Job que agrupa los assets
+practica_job = define_asset_job("job_practica_renta", selection=AssetSelection.all())
+
+# 2. Definimos el Sensor que vigila la carpeta del código
+@sensor(job=practica_job)
+def sensor_carpeta_codigo(context):
+    ruta_proyecto = "." 
+    
+    # FILTRO CRÍTICO: Solo vigilamos archivos que terminen en .txt
+    # Esto ignora los .csv de salida, los .py de código y las carpetas temporales
+    archivos = [f for f in os.listdir(ruta_proyecto) if f.endswith(".txt")]
+    
+    # Si no hay ningún .txt, no hacemos nada
+    if not archivos:
+        return
+
+    # Creamos la firma solo con esos archivos .txt
+    firmas = [f"{f}_{os.path.getmtime(f)}" for f in archivos]
+    estado_actual = "|".join(firmas)
+
+    # Solo si cambia un .txt se dispara el Job
+    if context.cursor != estado_actual:
+        context.update_cursor(estado_actual)
+        yield RunRequest(run_key=f"cambio_txt_{hash(estado_actual)}")
