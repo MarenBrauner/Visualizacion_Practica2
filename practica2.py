@@ -164,7 +164,8 @@ def generar_plot(df):
     descripcion_grafico = """
     REGLAS ESTRICTAS DE DATOS:
     1. Filtrar solo las 7 islas: ['Lanzarote', 'Fuerteventura', 'Gran Canaria', 'Tenerife', 'La Gomera', 'La Palma', 'El Hierro'].
-    2. Convertir 'TIME_PERIOD' a int.
+    2. Usar la columna 'TERRITORIO' para identificar las islas.
+    3. Convertir 'TIME_PERIOD' a int.
 
     REGLAS DE DISEÑO (ETIQUETAS Y ESTILO):
     - Estéticas: x='TIME_PERIOD', y='OBS_VALUE', color='MEDIDAS', group='MEDIDAS'.
@@ -345,6 +346,10 @@ def renta_municipios_unificada(renta_clean, codigos_geograficos):
         ordered=True
     )
     
+    # GUARDAR PARA POWER BI
+    # index=False evita que se cree una columna extra de números
+    df_final.to_csv('datos_para_powerbi.csv', index=False, encoding='utf-8-sig')
+
     return df_final
 
 
@@ -688,9 +693,138 @@ def grafico_estudios_por_sexo(estudios_unificados_islas):
     return "Gráfico de distribución de estudios por sexo generado con éxito"
 """
 
+# --- MAPA ---
+
+import geopandas as gpd # Necesario para leer el GeoJSON
+
+@asset
+def geometria_canarias():
+    """Carga el JSON de municipios y prepara el ID de unión"""
+    # Geopandas lee el .json directamente como una tabla geográfica
+    gdf = gpd.read_file('Municipios-2024.json')
+    
+    # En el ISTAC, el código del municipio suele estar en 'geocode'
+    # Lo normalizamos a 5 caracteres (ej. '38001') para que el merge sea limpio
+    gdf['id_union'] = gdf['geocode'].astype(str).str.zfill(5)
+    
+    return gdf
+
+@asset
+def prompt_mapa_renta(renta_municipios_unificada):
+    descripcion = """
+    DEVUELVE SOLO CÓDIGO PYTHON VÁLIDO.
+
+    PROHIBIDO:
+    - Explicar
+    - Comentar
+    - Hablar en español
+    -Añadir texto fuera del código
+
+    SI NO DEVUELVES SOLO CÓDIGO, LA RESPUESTA ES INCORRECTA.
+
+    CÓDIGO A GENERAR (NO MODIFICAR ESTRUCTURA):
+
+    def generar_plot(gdf):
+        from plotnine import ggplot, geom_map, aes, coord_fixed, theme_void, facet_wrap, scale_fill_cmap
+    
+        plot = (
+            ggplot(gdf)
+            + geom_map(aes(fill='OBS_VALUE'), color='white', size=0.1)
+            + facet_wrap('~ISLA', scales='free')
+            + coord_fixed()
+            + theme_void()
+            + scale_fill_cmap(cmap_name='YlGnBu')
+            + labs(title=texto_titulo, fill='Porcentaje')
+        )
+    
+        return plot
+    """
+
+    return {
+        "model": "ollama/llama3.1:8b",
+        "messages": [
+            {"role": "system", "content": "Eres un transcriptor de código. No comentas, no explicas, solo devuelves código Python perfectamente indentado."},
+            {"role": "user", "content": descripcion}
+        ],
+        "temperature": 0
+    }
+
+
+@asset
+def vis_mapa_renta_ia(prompt_mapa_renta, renta_municipios_unificada, geometria_canarias):
+    
+    # --- FILTRO CRÍTICO ---
+    # Elegimos solo una medida para que haya exactamente 1 dato por municipio.
+    # Por ejemplo: 'Renta bruta disponible' o 'Sueldos y salarios'
+    medida_objetivo = 'Sueldos y salarios' 
+    df_mapa = renta_municipios_unificada[renta_municipios_unificada['MEDIDAS'] == medida_objetivo].copy()
+
+    # 1. Preparación de datos (Asegurando GeoDataFrame)
+    df_unido = geometria_canarias.merge(
+        df_mapa, 
+        left_on='id_union', 
+        right_on='COD_MUN',
+        how='left'
+    )
+
+    # --- DEBUG PASO 1: Inspección de Orígenes ---
+    print(f"DEBUG: Filas en Geometría (JSON): {len(geometria_canarias)}")
+    print(f"DEBUG: Filas en Renta (CSV): {len(df_unido)}")
+
+    # --- DEBUG PASO 2: Resultado del Merge ---
+    nulos = df_unido['OBS_VALUE'].isna().sum()
+    print(f"DEBUG: Municipios que NO encontraron datos de renta: {nulos}")
+
+    gdf_final = gpd.GeoDataFrame(df_unido, geometry='geometry')
+    gdf_final['OBS_VALUE'] = pd.to_numeric(gdf_final['OBS_VALUE'], errors='coerce')
+
+    print(f"DEBUG: Valor Máximo Renta: {gdf_final['OBS_VALUE'].max()}")
+    print(f"DEBUG: Valor Mínimo Renta: {gdf_final['OBS_VALUE'].min()}")
+    print(f"DEBUG: Valores únicos detectados: {gdf_final['OBS_VALUE'].nunique()}")
+
+
+    # 2. Obtener y limpiar código
+    raw_codigo = pedir_codigo_a_ia(prompt_mapa_renta)
+    
+    # --- PROCESO DE LIMPIEZA EXTREMO ---
+    # Extraemos solo lo que está entre def y return plot (o lo que parezca código)
+    # Quitamos marcas de markdown ```python ... ```
+    codigo_limpio = re.sub(r'```python|```', '', raw_codigo)
+    
+    # Buscamos dónde empieza realmente la función para evitar textos previos
+    match = re.search(r'def generar_plot.*return plot', codigo_limpio, re.DOTALL)
+    if match:
+        codigo_limpio = match.group(0)
+    else:
+        # Si no encuentra la estructura, al menos quitamos espacios laterales
+        codigo_limpio = codigo_limpio.strip()
+
+    print(f"DEBUG - Código final que entrará en exec:\n{codigo_limpio}")
+    
+    # 3. Ejecución
+    entorno = globals().copy()
+    entorno['gdf'] = gdf_final
+    
+    # Variable dinámica para que la IA la use en el título
+    entorno['texto_titulo'] = f"{medida_objetivo} (2022)"
+
+    # Aquí es donde fallaba por la indentación
+    exec(codigo_limpio, entorno)
+    
+    grafico = entorno['generar_plot'](gdf_final)
+    grafico.save("grafico_mapa_renta_ia.png", dpi=300)
+    
+    return "OK"
+
+
+
+
+
+
+
 # --- Despliegue automático en GitHub ---
 
-@asset(deps=["vis_estudios_sexo", "vis_barras_municipios", "vis_lineas_renta"])
+@asset(deps=["vis_estudios_sexo", "vis_barras_municipios", "vis_lineas_renta", "vis_mapa_renta_ia"])
 # El uso de deps=[...] granatiza que este paso solo ocurra después de que todos 
 # los gráficos se hayan guardado en el disco local
 def publicar_a_github():
@@ -719,7 +853,8 @@ def publicar_a_github():
         return {
             "renta_lineas": f"{base_url}grafico_lineas_renta_ia.png",
             "renta_municipios": f"{base_url}grafico_barras_municipios_ia.png",
-            "estudios_sexo": f"{base_url}grafico_estudios_sexo_ia.png"
+            "estudios_sexo": f"{base_url}grafico_estudios_sexo_ia.png",
+            "mapa_renta": f"{base_url}grafico_mapa_renta_ia.png"
         }
         
     except subprocess.CalledProcessError as e:

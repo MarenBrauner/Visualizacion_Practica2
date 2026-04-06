@@ -1,0 +1,441 @@
+﻿TERRITORIO,COD_MUN,TIME_PERIOD,TIME_PERIOD_CODE,MEDIDAS,MEDIDAS_CODE,OBS_VALUE,NOMBRE,ISLA,valor_referencia
+Arrecife,35004,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,67.8,Arrecife,Lanzarote,67.8
+Arrecife,35004,2022,2022,Otros ingresos,OTROS_INGRESOS,10.6,Arrecife,Lanzarote,67.8
+Arrecife,35004,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,4.2,Arrecife,Lanzarote,67.8
+Arrecife,35004,2022,2022,Pensiones,PENSIONES,14.4,Arrecife,Lanzarote,67.8
+Arrecife,35004,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,3.0,Arrecife,Lanzarote,67.8
+Haría,35010,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,56.8,Haría,Lanzarote,56.8
+Haría,35010,2022,2022,Otros ingresos,OTROS_INGRESOS,16.0,Haría,Lanzarote,56.8
+Haría,35010,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,4.2,Haría,Lanzarote,56.8
+Haría,35010,2022,2022,Pensiones,PENSIONES,20.8,Haría,Lanzarote,56.8
+Haría,35010,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.2,Haría,Lanzarote,56.8
+San Bartolomé,35018,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,68.2,San Bartolomé,Lanzarote,68.2
+San Bartolomé,35018,2022,2022,Otros ingresos,OTROS_INGRESOS,13.8,San Bartolomé,Lanzarote,68.2
+San Bartolomé,35018,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,3.3,San Bartolomé,Lanzarote,68.2
+San Bartolomé,35018,2022,2022,Pensiones,PENSIONES,12.5,San Bartolomé,Lanzarote,68.2
+San Bartolomé,35018,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.3,San Bartolomé,Lanzarote,68.2
+Teguise,35024,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,64.9,Teguise,Lanzarote,64.9
+Teguise,35024,2022,2022,Otros ingresos,OTROS_INGRESOS,19.3,Teguise,Lanzarote,64.9
+Teguise,35024,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,2.9,Teguise,Lanzarote,64.9
+Teguise,35024,2022,2022,Pensiones,PENSIONES,11.0,Teguise,Lanzarote,64.9
+Teguise,35024,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,1.8,Teguise,Lanzarote,64.9
+Tías,35028,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,58.7,Tías,Lanzarote,58.7
+Tías,35028,2022,2022,Otros ingresos,OTROS_INGRESOS,23.1,Tías,Lanzarote,58.7
+Tías,35028,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,2.8,Tías,Lanzarote,58.7
+Tías,35028,2022,2022,Pensiones,PENSIONES,13.2,Tías,Lanzarote,58.7
+Tías,35028,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.2,Tías,Lanzarote,58.7
+Tinajo,35029,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,66.2,Tinajo,Lanzarote,66.2
+Tinajo,35029,2022,2022,Otros ingresos,OTROS_INGRESOS,16.0,Tinajo,Lanzarote,66.2
+Tinajo,35029,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,3.3,Tinajo,Lanzarote,66.2
+Tinajo,35029,2022,2022,Pensiones,PENSIONES,12.1,Tinajo,Lanzarote,66.2
+Tinajo,35029,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.4,Tinajo,Lanzarote,66.2
+Yaiza,35034,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,65.1,Yaiza,Lanzarote,65.1
+Yaiza,35034,2022,2022,Otros ingresos,OTROS_INGRESOS,19.7,Yaiza,Lanzarote,65.1
+Yaiza,35034,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,3.0,Yaiza,Lanzarote,65.1
+Yaiza,35034,2022,2022,Pensiones,PENSIONES,10.0,Yaiza,Lanzarote,65.1
+Yaiza,35034,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.2,Yaiza,Lanzarote,65.1
+Antigua,35003,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,64.3,Antigua,Fuerteventura,64.3
+Antigua,35003,2022,2022,Otros ingresos,OTROS_INGRESOS,15.1,Antigua,Fuerteventura,64.3
+Antigua,35003,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,3.6,Antigua,Fuerteventura,64.3
+Antigua,35003,2022,2022,Pensiones,PENSIONES,14.0,Antigua,Fuerteventura,64.3
+Antigua,35003,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,3.0,Antigua,Fuerteventura,64.3
+Betancuria,35007,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,51.0,Betancuria,Fuerteventura,51.0
+Betancuria,35007,2022,2022,Otros ingresos,OTROS_INGRESOS,23.9,Betancuria,Fuerteventura,51.0
+Betancuria,35007,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,4.2,Betancuria,Fuerteventura,51.0
+Betancuria,35007,2022,2022,Pensiones,PENSIONES,19.2,Betancuria,Fuerteventura,51.0
+Betancuria,35007,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,1.7,Betancuria,Fuerteventura,51.0
+La Oliva,35014,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,60.7,"Oliva, La",Fuerteventura,60.7
+La Oliva,35014,2022,2022,Otros ingresos,OTROS_INGRESOS,21.7,"Oliva, La",Fuerteventura,60.7
+La Oliva,35014,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,3.5,"Oliva, La",Fuerteventura,60.7
+La Oliva,35014,2022,2022,Pensiones,PENSIONES,11.2,"Oliva, La",Fuerteventura,60.7
+La Oliva,35014,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,3.0,"Oliva, La",Fuerteventura,60.7
+Pájara,35015,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,71.9,Pájara,Fuerteventura,71.9
+Pájara,35015,2022,2022,Otros ingresos,OTROS_INGRESOS,11.9,Pájara,Fuerteventura,71.9
+Pájara,35015,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,3.7,Pájara,Fuerteventura,71.9
+Pájara,35015,2022,2022,Pensiones,PENSIONES,9.4,Pájara,Fuerteventura,71.9
+Pájara,35015,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,3.2,Pájara,Fuerteventura,71.9
+Puerto del Rosario,35017,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,69.8,Puerto del Rosario,Fuerteventura,69.8
+Puerto del Rosario,35017,2022,2022,Otros ingresos,OTROS_INGRESOS,11.4,Puerto del Rosario,Fuerteventura,69.8
+Puerto del Rosario,35017,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,4.1,Puerto del Rosario,Fuerteventura,69.8
+Puerto del Rosario,35017,2022,2022,Pensiones,PENSIONES,12.0,Puerto del Rosario,Fuerteventura,69.8
+Puerto del Rosario,35017,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.7,Puerto del Rosario,Fuerteventura,69.8
+Tuineje,35030,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,66.7,Tuineje,Fuerteventura,66.7
+Tuineje,35030,2022,2022,Otros ingresos,OTROS_INGRESOS,12.0,Tuineje,Fuerteventura,66.7
+Tuineje,35030,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,4.7,Tuineje,Fuerteventura,66.7
+Tuineje,35030,2022,2022,Pensiones,PENSIONES,13.4,Tuineje,Fuerteventura,66.7
+Tuineje,35030,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,3.2,Tuineje,Fuerteventura,66.7
+Agaete,35001,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,58.1,Agaete,Gran Canaria,58.1
+Agaete,35001,2022,2022,Otros ingresos,OTROS_INGRESOS,10.5,Agaete,Gran Canaria,58.1
+Agaete,35001,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,6.3,Agaete,Gran Canaria,58.1
+Agaete,35001,2022,2022,Pensiones,PENSIONES,22.4,Agaete,Gran Canaria,58.1
+Agaete,35001,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.6,Agaete,Gran Canaria,58.1
+Agüimes,35002,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,66.5,Agüimes,Gran Canaria,66.5
+Agüimes,35002,2022,2022,Otros ingresos,OTROS_INGRESOS,9.9,Agüimes,Gran Canaria,66.5
+Agüimes,35002,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,5.4,Agüimes,Gran Canaria,66.5
+Agüimes,35002,2022,2022,Pensiones,PENSIONES,15.3,Agüimes,Gran Canaria,66.5
+Agüimes,35002,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,3.0,Agüimes,Gran Canaria,66.5
+Artenara,35005,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,59.5,Artenara,Gran Canaria,59.5
+Artenara,35005,2022,2022,Otros ingresos,OTROS_INGRESOS,8.4,Artenara,Gran Canaria,59.5
+Artenara,35005,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,5.2,Artenara,Gran Canaria,59.5
+Artenara,35005,2022,2022,Pensiones,PENSIONES,24.6,Artenara,Gran Canaria,59.5
+Artenara,35005,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.3,Artenara,Gran Canaria,59.5
+Arucas,35006,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,64.7,Arucas,Gran Canaria,64.7
+Arucas,35006,2022,2022,Otros ingresos,OTROS_INGRESOS,9.7,Arucas,Gran Canaria,64.7
+Arucas,35006,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,5.3,Arucas,Gran Canaria,64.7
+Arucas,35006,2022,2022,Pensiones,PENSIONES,17.9,Arucas,Gran Canaria,64.7
+Arucas,35006,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.4,Arucas,Gran Canaria,64.7
+Firgas,35008,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,63.3,Firgas,Gran Canaria,63.3
+Firgas,35008,2022,2022,Otros ingresos,OTROS_INGRESOS,9.1,Firgas,Gran Canaria,63.3
+Firgas,35008,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,5.9,Firgas,Gran Canaria,63.3
+Firgas,35008,2022,2022,Pensiones,PENSIONES,19.1,Firgas,Gran Canaria,63.3
+Firgas,35008,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.7,Firgas,Gran Canaria,63.3
+Gáldar,35009,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,59.9,Gáldar,Gran Canaria,59.9
+Gáldar,35009,2022,2022,Otros ingresos,OTROS_INGRESOS,9.6,Gáldar,Gran Canaria,59.9
+Gáldar,35009,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,7.6,Gáldar,Gran Canaria,59.9
+Gáldar,35009,2022,2022,Pensiones,PENSIONES,20.2,Gáldar,Gran Canaria,59.9
+Gáldar,35009,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.8,Gáldar,Gran Canaria,59.9
+Ingenio,35011,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,64.4,Ingenio,Gran Canaria,64.4
+Ingenio,35011,2022,2022,Otros ingresos,OTROS_INGRESOS,8.3,Ingenio,Gran Canaria,64.4
+Ingenio,35011,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,6.7,Ingenio,Gran Canaria,64.4
+Ingenio,35011,2022,2022,Pensiones,PENSIONES,17.5,Ingenio,Gran Canaria,64.4
+Ingenio,35011,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,3.1,Ingenio,Gran Canaria,64.4
+Mogán,35012,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,59.4,Mogán,Gran Canaria,59.4
+Mogán,35012,2022,2022,Otros ingresos,OTROS_INGRESOS,17.6,Mogán,Gran Canaria,59.4
+Mogán,35012,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,4.1,Mogán,Gran Canaria,59.4
+Mogán,35012,2022,2022,Pensiones,PENSIONES,15.8,Mogán,Gran Canaria,59.4
+Mogán,35012,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,3.2,Mogán,Gran Canaria,59.4
+Moya,35013,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,56.1,Moya,Gran Canaria,56.1
+Moya,35013,2022,2022,Otros ingresos,OTROS_INGRESOS,13.6,Moya,Gran Canaria,56.1
+Moya,35013,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,6.7,Moya,Gran Canaria,56.1
+Moya,35013,2022,2022,Pensiones,PENSIONES,21.0,Moya,Gran Canaria,56.1
+Moya,35013,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.6,Moya,Gran Canaria,56.1
+Las Palmas de Gran Canaria,35016,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,58.6,"Palmas de Gran Canaria, Las",Gran Canaria,58.6
+Las Palmas de Gran Canaria,35016,2022,2022,Otros ingresos,OTROS_INGRESOS,14.5,"Palmas de Gran Canaria, Las",Gran Canaria,58.6
+Las Palmas de Gran Canaria,35016,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,5.0,"Palmas de Gran Canaria, Las",Gran Canaria,58.6
+Las Palmas de Gran Canaria,35016,2022,2022,Pensiones,PENSIONES,19.8,"Palmas de Gran Canaria, Las",Gran Canaria,58.6
+Las Palmas de Gran Canaria,35016,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.1,"Palmas de Gran Canaria, Las",Gran Canaria,58.6
+San Bartolomé de Tirajana,35019,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,56.9,San Bartolomé de Tirajana,Gran Canaria,56.9
+San Bartolomé de Tirajana,35019,2022,2022,Otros ingresos,OTROS_INGRESOS,18.5,San Bartolomé de Tirajana,Gran Canaria,56.9
+San Bartolomé de Tirajana,35019,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,4.4,San Bartolomé de Tirajana,Gran Canaria,56.9
+San Bartolomé de Tirajana,35019,2022,2022,Pensiones,PENSIONES,17.5,San Bartolomé de Tirajana,Gran Canaria,56.9
+San Bartolomé de Tirajana,35019,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.7,San Bartolomé de Tirajana,Gran Canaria,56.9
+La Aldea de San Nicolás,35020,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,53.0,"Aldea de San Nicolás, La",Gran Canaria,53.0
+La Aldea de San Nicolás,35020,2022,2022,Otros ingresos,OTROS_INGRESOS,10.8,"Aldea de San Nicolás, La",Gran Canaria,53.0
+La Aldea de San Nicolás,35020,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,7.4,"Aldea de San Nicolás, La",Gran Canaria,53.0
+La Aldea de San Nicolás,35020,2022,2022,Pensiones,PENSIONES,24.3,"Aldea de San Nicolás, La",Gran Canaria,53.0
+La Aldea de San Nicolás,35020,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,4.6,"Aldea de San Nicolás, La",Gran Canaria,53.0
+Santa Brígida,35021,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,54.7,Santa Brígida,Gran Canaria,54.7
+Santa Brígida,35021,2022,2022,Otros ingresos,OTROS_INGRESOS,24.2,Santa Brígida,Gran Canaria,54.7
+Santa Brígida,35021,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,3.6,Santa Brígida,Gran Canaria,54.7
+Santa Brígida,35021,2022,2022,Pensiones,PENSIONES,16.2,Santa Brígida,Gran Canaria,54.7
+Santa Brígida,35021,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,1.4,Santa Brígida,Gran Canaria,54.7
+Santa Lucía de Tirajana,35022,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,66.7,Santa Lucía de Tirajana,Gran Canaria,66.7
+Santa Lucía de Tirajana,35022,2022,2022,Otros ingresos,OTROS_INGRESOS,10.3,Santa Lucía de Tirajana,Gran Canaria,66.7
+Santa Lucía de Tirajana,35022,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,5.9,Santa Lucía de Tirajana,Gran Canaria,66.7
+Santa Lucía de Tirajana,35022,2022,2022,Pensiones,PENSIONES,13.5,Santa Lucía de Tirajana,Gran Canaria,66.7
+Santa Lucía de Tirajana,35022,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,3.6,Santa Lucía de Tirajana,Gran Canaria,66.7
+Santa María de Guía de Gran Canaria,35023,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,59.2,Santa María de Guía de Gran Canaria,Gran Canaria,59.2
+Santa María de Guía de Gran Canaria,35023,2022,2022,Otros ingresos,OTROS_INGRESOS,10.1,Santa María de Guía de Gran Canaria,Gran Canaria,59.2
+Santa María de Guía de Gran Canaria,35023,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,7.1,Santa María de Guía de Gran Canaria,Gran Canaria,59.2
+Santa María de Guía de Gran Canaria,35023,2022,2022,Pensiones,PENSIONES,21.2,Santa María de Guía de Gran Canaria,Gran Canaria,59.2
+Santa María de Guía de Gran Canaria,35023,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.5,Santa María de Guía de Gran Canaria,Gran Canaria,59.2
+Tejeda,35025,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,49.9,Tejeda,Gran Canaria,49.9
+Tejeda,35025,2022,2022,Otros ingresos,OTROS_INGRESOS,14.1,Tejeda,Gran Canaria,49.9
+Tejeda,35025,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,4.5,Tejeda,Gran Canaria,49.9
+Tejeda,35025,2022,2022,Pensiones,PENSIONES,29.4,Tejeda,Gran Canaria,49.9
+Tejeda,35025,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.2,Tejeda,Gran Canaria,49.9
+Telde,35026,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,64.2,Telde,Gran Canaria,64.2
+Telde,35026,2022,2022,Otros ingresos,OTROS_INGRESOS,9.9,Telde,Gran Canaria,64.2
+Telde,35026,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,5.7,Telde,Gran Canaria,64.2
+Telde,35026,2022,2022,Pensiones,PENSIONES,17.3,Telde,Gran Canaria,64.2
+Telde,35026,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.9,Telde,Gran Canaria,64.2
+Teror,35027,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,62.0,Teror,Gran Canaria,62.0
+Teror,35027,2022,2022,Otros ingresos,OTROS_INGRESOS,12.2,Teror,Gran Canaria,62.0
+Teror,35027,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,4.8,Teror,Gran Canaria,62.0
+Teror,35027,2022,2022,Pensiones,PENSIONES,18.6,Teror,Gran Canaria,62.0
+Teror,35027,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.5,Teror,Gran Canaria,62.0
+Valsequillo de Gran Canaria,35031,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,64.8,Valsequillo de Gran Canaria,Gran Canaria,64.8
+Valsequillo de Gran Canaria,35031,2022,2022,Otros ingresos,OTROS_INGRESOS,12.0,Valsequillo de Gran Canaria,Gran Canaria,64.8
+Valsequillo de Gran Canaria,35031,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,4.9,Valsequillo de Gran Canaria,Gran Canaria,64.8
+Valsequillo de Gran Canaria,35031,2022,2022,Pensiones,PENSIONES,15.6,Valsequillo de Gran Canaria,Gran Canaria,64.8
+Valsequillo de Gran Canaria,35031,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.7,Valsequillo de Gran Canaria,Gran Canaria,64.8
+Valleseco,35032,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,56.9,Valleseco,Gran Canaria,56.9
+Valleseco,35032,2022,2022,Otros ingresos,OTROS_INGRESOS,11.0,Valleseco,Gran Canaria,56.9
+Valleseco,35032,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,5.9,Valleseco,Gran Canaria,56.9
+Valleseco,35032,2022,2022,Pensiones,PENSIONES,23.8,Valleseco,Gran Canaria,56.9
+Valleseco,35032,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.4,Valleseco,Gran Canaria,56.9
+Vega de San Mateo,35033,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,59.8,Vega de San Mateo,Gran Canaria,59.8
+Vega de San Mateo,35033,2022,2022,Otros ingresos,OTROS_INGRESOS,12.4,Vega de San Mateo,Gran Canaria,59.8
+Vega de San Mateo,35033,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,5.9,Vega de San Mateo,Gran Canaria,59.8
+Vega de San Mateo,35033,2022,2022,Pensiones,PENSIONES,19.5,Vega de San Mateo,Gran Canaria,59.8
+Vega de San Mateo,35033,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.4,Vega de San Mateo,Gran Canaria,59.8
+Adeje,38001,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,62.7,Adeje,Tenerife,62.7
+Adeje,38001,2022,2022,Otros ingresos,OTROS_INGRESOS,20.2,Adeje,Tenerife,62.7
+Adeje,38001,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,2.8,Adeje,Tenerife,62.7
+Adeje,38001,2022,2022,Pensiones,PENSIONES,11.7,Adeje,Tenerife,62.7
+Adeje,38001,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.6,Adeje,Tenerife,62.7
+Arafo,38004,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,63.0,Arafo,Tenerife,63.0
+Arafo,38004,2022,2022,Otros ingresos,OTROS_INGRESOS,10.6,Arafo,Tenerife,63.0
+Arafo,38004,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,3.9,Arafo,Tenerife,63.0
+Arafo,38004,2022,2022,Pensiones,PENSIONES,20.1,Arafo,Tenerife,63.0
+Arafo,38004,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.5,Arafo,Tenerife,63.0
+Arico,38005,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,63.0,Arico,Tenerife,63.0
+Arico,38005,2022,2022,Otros ingresos,OTROS_INGRESOS,9.9,Arico,Tenerife,63.0
+Arico,38005,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,3.8,Arico,Tenerife,63.0
+Arico,38005,2022,2022,Pensiones,PENSIONES,20.0,Arico,Tenerife,63.0
+Arico,38005,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,3.4,Arico,Tenerife,63.0
+Arona,38006,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,62.5,Arona,Tenerife,62.5
+Arona,38006,2022,2022,Otros ingresos,OTROS_INGRESOS,15.5,Arona,Tenerife,62.5
+Arona,38006,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,3.8,Arona,Tenerife,62.5
+Arona,38006,2022,2022,Pensiones,PENSIONES,15.0,Arona,Tenerife,62.5
+Arona,38006,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,3.2,Arona,Tenerife,62.5
+Buenavista del Norte,38010,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,51.0,Buenavista del Norte,Tenerife,51.0
+Buenavista del Norte,38010,2022,2022,Otros ingresos,OTROS_INGRESOS,15.0,Buenavista del Norte,Tenerife,51.0
+Buenavista del Norte,38010,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,5.1,Buenavista del Norte,Tenerife,51.0
+Buenavista del Norte,38010,2022,2022,Pensiones,PENSIONES,25.2,Buenavista del Norte,Tenerife,51.0
+Buenavista del Norte,38010,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,3.6,Buenavista del Norte,Tenerife,51.0
+Candelaria,38011,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,64.6,Candelaria,Tenerife,64.6
+Candelaria,38011,2022,2022,Otros ingresos,OTROS_INGRESOS,11.7,Candelaria,Tenerife,64.6
+Candelaria,38011,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,3.9,Candelaria,Tenerife,64.6
+Candelaria,38011,2022,2022,Pensiones,PENSIONES,17.9,Candelaria,Tenerife,64.6
+Candelaria,38011,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.0,Candelaria,Tenerife,64.6
+Fasnia,38012,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,58.9,Fasnia,Tenerife,58.9
+Fasnia,38012,2022,2022,Otros ingresos,OTROS_INGRESOS,10.3,Fasnia,Tenerife,58.9
+Fasnia,38012,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,4.5,Fasnia,Tenerife,58.9
+Fasnia,38012,2022,2022,Pensiones,PENSIONES,23.5,Fasnia,Tenerife,58.9
+Fasnia,38012,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.9,Fasnia,Tenerife,58.9
+Garachico,38015,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,54.0,Garachico,Tenerife,54.0
+Garachico,38015,2022,2022,Otros ingresos,OTROS_INGRESOS,13.9,Garachico,Tenerife,54.0
+Garachico,38015,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,4.7,Garachico,Tenerife,54.0
+Garachico,38015,2022,2022,Pensiones,PENSIONES,24.6,Garachico,Tenerife,54.0
+Garachico,38015,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.9,Garachico,Tenerife,54.0
+Granadilla de Abona,38017,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,67.5,Granadilla de Abona,Tenerife,67.5
+Granadilla de Abona,38017,2022,2022,Otros ingresos,OTROS_INGRESOS,12.4,Granadilla de Abona,Tenerife,67.5
+Granadilla de Abona,38017,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,3.9,Granadilla de Abona,Tenerife,67.5
+Granadilla de Abona,38017,2022,2022,Pensiones,PENSIONES,12.8,Granadilla de Abona,Tenerife,67.5
+Granadilla de Abona,38017,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,3.4,Granadilla de Abona,Tenerife,67.5
+La Guancha,38018,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,58.3,"Guancha, La",Tenerife,58.3
+La Guancha,38018,2022,2022,Otros ingresos,OTROS_INGRESOS,9.9,"Guancha, La",Tenerife,58.3
+La Guancha,38018,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,5.3,"Guancha, La",Tenerife,58.3
+La Guancha,38018,2022,2022,Pensiones,PENSIONES,23.4,"Guancha, La",Tenerife,58.3
+La Guancha,38018,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,3.2,"Guancha, La",Tenerife,58.3
+Guía de Isora,38019,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,63.1,Guía de Isora,Tenerife,63.1
+Guía de Isora,38019,2022,2022,Otros ingresos,OTROS_INGRESOS,13.1,Guía de Isora,Tenerife,63.1
+Guía de Isora,38019,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,3.8,Guía de Isora,Tenerife,63.1
+Guía de Isora,38019,2022,2022,Pensiones,PENSIONES,16.8,Guía de Isora,Tenerife,63.1
+Guía de Isora,38019,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,3.3,Guía de Isora,Tenerife,63.1
+Güímar,38020,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,63.8,Güímar,Tenerife,63.8
+Güímar,38020,2022,2022,Otros ingresos,OTROS_INGRESOS,9.0,Güímar,Tenerife,63.8
+Güímar,38020,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,4.2,Güímar,Tenerife,63.8
+Güímar,38020,2022,2022,Pensiones,PENSIONES,20.0,Güímar,Tenerife,63.8
+Güímar,38020,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.9,Güímar,Tenerife,63.8
+Icod de los Vinos,38022,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,56.1,Icod de los Vinos,Tenerife,56.1
+Icod de los Vinos,38022,2022,2022,Otros ingresos,OTROS_INGRESOS,12.1,Icod de los Vinos,Tenerife,56.1
+Icod de los Vinos,38022,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,5.0,Icod de los Vinos,Tenerife,56.1
+Icod de los Vinos,38022,2022,2022,Pensiones,PENSIONES,23.3,Icod de los Vinos,Tenerife,56.1
+Icod de los Vinos,38022,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,3.6,Icod de los Vinos,Tenerife,56.1
+San Cristóbal de La Laguna,38023,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,62.6,San Cristóbal de La Laguna,Tenerife,62.6
+San Cristóbal de La Laguna,38023,2022,2022,Otros ingresos,OTROS_INGRESOS,11.1,San Cristóbal de La Laguna,Tenerife,62.6
+San Cristóbal de La Laguna,38023,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,4.2,San Cristóbal de La Laguna,Tenerife,62.6
+San Cristóbal de La Laguna,38023,2022,2022,Pensiones,PENSIONES,19.8,San Cristóbal de La Laguna,Tenerife,62.6
+San Cristóbal de La Laguna,38023,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.4,San Cristóbal de La Laguna,Tenerife,62.6
+La Matanza de Acentejo,38025,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,64.3,"Matanza de Acentejo, La",Tenerife,64.3
+La Matanza de Acentejo,38025,2022,2022,Otros ingresos,OTROS_INGRESOS,11.2,"Matanza de Acentejo, La",Tenerife,64.3
+La Matanza de Acentejo,38025,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,4.3,"Matanza de Acentejo, La",Tenerife,64.3
+La Matanza de Acentejo,38025,2022,2022,Pensiones,PENSIONES,17.3,"Matanza de Acentejo, La",Tenerife,64.3
+La Matanza de Acentejo,38025,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,3.0,"Matanza de Acentejo, La",Tenerife,64.3
+La Orotava,38026,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,59.3,"Orotava, La",Tenerife,59.3
+La Orotava,38026,2022,2022,Otros ingresos,OTROS_INGRESOS,13.5,"Orotava, La",Tenerife,59.3
+La Orotava,38026,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,4.4,"Orotava, La",Tenerife,59.3
+La Orotava,38026,2022,2022,Pensiones,PENSIONES,20.0,"Orotava, La",Tenerife,59.3
+La Orotava,38026,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.8,"Orotava, La",Tenerife,59.3
+Puerto de la Cruz,38028,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,48.3,Puerto de la Cruz,Tenerife,48.3
+Puerto de la Cruz,38028,2022,2022,Otros ingresos,OTROS_INGRESOS,19.3,Puerto de la Cruz,Tenerife,48.3
+Puerto de la Cruz,38028,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,4.1,Puerto de la Cruz,Tenerife,48.3
+Puerto de la Cruz,38028,2022,2022,Pensiones,PENSIONES,25.8,Puerto de la Cruz,Tenerife,48.3
+Puerto de la Cruz,38028,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.4,Puerto de la Cruz,Tenerife,48.3
+Los Realejos,38031,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,60.8,"Realejos, Los",Tenerife,60.8
+Los Realejos,38031,2022,2022,Otros ingresos,OTROS_INGRESOS,10.5,"Realejos, Los",Tenerife,60.8
+Los Realejos,38031,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,4.6,"Realejos, Los",Tenerife,60.8
+Los Realejos,38031,2022,2022,Pensiones,PENSIONES,20.6,"Realejos, Los",Tenerife,60.8
+Los Realejos,38031,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,3.6,"Realejos, Los",Tenerife,60.8
+El Rosario,38032,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,64.5,"Rosario, El",Tenerife,64.5
+El Rosario,38032,2022,2022,Otros ingresos,OTROS_INGRESOS,15.1,"Rosario, El",Tenerife,64.5
+El Rosario,38032,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,3.0,"Rosario, El",Tenerife,64.5
+El Rosario,38032,2022,2022,Pensiones,PENSIONES,15.7,"Rosario, El",Tenerife,64.5
+El Rosario,38032,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,1.7,"Rosario, El",Tenerife,64.5
+San Juan de la Rambla,38034,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,61.8,San Juan de la Rambla,Tenerife,61.8
+San Juan de la Rambla,38034,2022,2022,Otros ingresos,OTROS_INGRESOS,10.2,San Juan de la Rambla,Tenerife,61.8
+San Juan de la Rambla,38034,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,5.0,San Juan de la Rambla,Tenerife,61.8
+San Juan de la Rambla,38034,2022,2022,Pensiones,PENSIONES,19.6,San Juan de la Rambla,Tenerife,61.8
+San Juan de la Rambla,38034,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,3.4,San Juan de la Rambla,Tenerife,61.8
+San Miguel de Abona,38035,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,65.3,San Miguel de Abona,Tenerife,65.3
+San Miguel de Abona,38035,2022,2022,Otros ingresos,OTROS_INGRESOS,15.7,San Miguel de Abona,Tenerife,65.3
+San Miguel de Abona,38035,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,3.2,San Miguel de Abona,Tenerife,65.3
+San Miguel de Abona,38035,2022,2022,Pensiones,PENSIONES,12.8,San Miguel de Abona,Tenerife,65.3
+San Miguel de Abona,38035,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,3.0,San Miguel de Abona,Tenerife,65.3
+Santa Cruz de Tenerife,38038,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,58.1,Santa Cruz de Tenerife,Tenerife,58.1
+Santa Cruz de Tenerife,38038,2022,2022,Otros ingresos,OTROS_INGRESOS,14.4,Santa Cruz de Tenerife,Tenerife,58.1
+Santa Cruz de Tenerife,38038,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,4.3,Santa Cruz de Tenerife,Tenerife,58.1
+Santa Cruz de Tenerife,38038,2022,2022,Pensiones,PENSIONES,21.2,Santa Cruz de Tenerife,Tenerife,58.1
+Santa Cruz de Tenerife,38038,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.0,Santa Cruz de Tenerife,Tenerife,58.1
+Santa Úrsula,38039,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,60.2,Santa Úrsula,Tenerife,60.2
+Santa Úrsula,38039,2022,2022,Otros ingresos,OTROS_INGRESOS,16.7,Santa Úrsula,Tenerife,60.2
+Santa Úrsula,38039,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,4.5,Santa Úrsula,Tenerife,60.2
+Santa Úrsula,38039,2022,2022,Pensiones,PENSIONES,15.8,Santa Úrsula,Tenerife,60.2
+Santa Úrsula,38039,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.9,Santa Úrsula,Tenerife,60.2
+Santiago del Teide,38040,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,59.2,Santiago del Teide,Tenerife,59.2
+Santiago del Teide,38040,2022,2022,Otros ingresos,OTROS_INGRESOS,18.7,Santiago del Teide,Tenerife,59.2
+Santiago del Teide,38040,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,3.7,Santiago del Teide,Tenerife,59.2
+Santiago del Teide,38040,2022,2022,Pensiones,PENSIONES,15.7,Santiago del Teide,Tenerife,59.2
+Santiago del Teide,38040,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.7,Santiago del Teide,Tenerife,59.2
+El Sauzal,38041,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,61.0,"Sauzal, El",Tenerife,61.0
+El Sauzal,38041,2022,2022,Otros ingresos,OTROS_INGRESOS,13.4,"Sauzal, El",Tenerife,61.0
+El Sauzal,38041,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,4.2,"Sauzal, El",Tenerife,61.0
+El Sauzal,38041,2022,2022,Pensiones,PENSIONES,19.2,"Sauzal, El",Tenerife,61.0
+El Sauzal,38041,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.2,"Sauzal, El",Tenerife,61.0
+Los Silos,38042,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,53.9,"Silos, Los",Tenerife,53.9
+Los Silos,38042,2022,2022,Otros ingresos,OTROS_INGRESOS,12.2,"Silos, Los",Tenerife,53.9
+Los Silos,38042,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,4.3,"Silos, Los",Tenerife,53.9
+Los Silos,38042,2022,2022,Pensiones,PENSIONES,26.3,"Silos, Los",Tenerife,53.9
+Los Silos,38042,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,3.3,"Silos, Los",Tenerife,53.9
+Tacoronte,38043,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,62.5,Tacoronte,Tenerife,62.5
+Tacoronte,38043,2022,2022,Otros ingresos,OTROS_INGRESOS,12.3,Tacoronte,Tenerife,62.5
+Tacoronte,38043,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,4.1,Tacoronte,Tenerife,62.5
+Tacoronte,38043,2022,2022,Pensiones,PENSIONES,18.7,Tacoronte,Tenerife,62.5
+Tacoronte,38043,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.4,Tacoronte,Tenerife,62.5
+El Tanque,38044,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,57.9,"Tanque, El",Tenerife,57.9
+El Tanque,38044,2022,2022,Otros ingresos,OTROS_INGRESOS,11.0,"Tanque, El",Tenerife,57.9
+El Tanque,38044,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,5.4,"Tanque, El",Tenerife,57.9
+El Tanque,38044,2022,2022,Pensiones,PENSIONES,21.3,"Tanque, El",Tenerife,57.9
+El Tanque,38044,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,4.4,"Tanque, El",Tenerife,57.9
+Tegueste,38046,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,62.8,Tegueste,Tenerife,62.8
+Tegueste,38046,2022,2022,Otros ingresos,OTROS_INGRESOS,12.6,Tegueste,Tenerife,62.8
+Tegueste,38046,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,3.4,Tegueste,Tenerife,62.8
+Tegueste,38046,2022,2022,Pensiones,PENSIONES,19.3,Tegueste,Tenerife,62.8
+Tegueste,38046,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,1.9,Tegueste,Tenerife,62.8
+La Victoria de Acentejo,38051,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,60.4,"Victoria de Acentejo, La",Tenerife,60.4
+La Victoria de Acentejo,38051,2022,2022,Otros ingresos,OTROS_INGRESOS,10.8,"Victoria de Acentejo, La",Tenerife,60.4
+La Victoria de Acentejo,38051,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,5.1,"Victoria de Acentejo, La",Tenerife,60.4
+La Victoria de Acentejo,38051,2022,2022,Pensiones,PENSIONES,20.2,"Victoria de Acentejo, La",Tenerife,60.4
+La Victoria de Acentejo,38051,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,3.5,"Victoria de Acentejo, La",Tenerife,60.4
+Vilaflor de Chasna,38052,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,56.0,Vilaflor de Chasna,Tenerife,56.0
+Vilaflor de Chasna,38052,2022,2022,Otros ingresos,OTROS_INGRESOS,14.7,Vilaflor de Chasna,Tenerife,56.0
+Vilaflor de Chasna,38052,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,3.2,Vilaflor de Chasna,Tenerife,56.0
+Vilaflor de Chasna,38052,2022,2022,Pensiones,PENSIONES,22.8,Vilaflor de Chasna,Tenerife,56.0
+Vilaflor de Chasna,38052,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,3.3,Vilaflor de Chasna,Tenerife,56.0
+Agulo,38002,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,49.3,Agulo,"Gomera, La ",49.3
+Agulo,38002,2022,2022,Otros ingresos,OTROS_INGRESOS,15.4,Agulo,"Gomera, La ",49.3
+Agulo,38002,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,4.0,Agulo,"Gomera, La ",49.3
+Agulo,38002,2022,2022,Pensiones,PENSIONES,28.9,Agulo,"Gomera, La ",49.3
+Agulo,38002,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.4,Agulo,"Gomera, La ",49.3
+Alajeró,38003,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,62.0,Alajeró,"Gomera, La ",62.0
+Alajeró,38003,2022,2022,Otros ingresos,OTROS_INGRESOS,10.8,Alajeró,"Gomera, La ",62.0
+Alajeró,38003,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,4.0,Alajeró,"Gomera, La ",62.0
+Alajeró,38003,2022,2022,Pensiones,PENSIONES,21.1,Alajeró,"Gomera, La ",62.0
+Alajeró,38003,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.1,Alajeró,"Gomera, La ",62.0
+Hermigua,38021,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,54.3,Hermigua,"Gomera, La ",54.3
+Hermigua,38021,2022,2022,Otros ingresos,OTROS_INGRESOS,13.4,Hermigua,"Gomera, La ",54.3
+Hermigua,38021,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,3.9,Hermigua,"Gomera, La ",54.3
+Hermigua,38021,2022,2022,Pensiones,PENSIONES,25.7,Hermigua,"Gomera, La ",54.3
+Hermigua,38021,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.9,Hermigua,"Gomera, La ",54.3
+San Sebastián de La Gomera,38036,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,66.2,San Sebastián de la Gomera,"Gomera, La ",66.2
+San Sebastián de La Gomera,38036,2022,2022,Otros ingresos,OTROS_INGRESOS,10.6,San Sebastián de la Gomera,"Gomera, La ",66.2
+San Sebastián de La Gomera,38036,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,3.7,San Sebastián de la Gomera,"Gomera, La ",66.2
+San Sebastián de La Gomera,38036,2022,2022,Pensiones,PENSIONES,17.4,San Sebastián de la Gomera,"Gomera, La ",66.2
+San Sebastián de La Gomera,38036,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.1,San Sebastián de la Gomera,"Gomera, La ",66.2
+Valle Gran Rey,38049,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,51.6,Valle Gran Rey,"Gomera, La ",51.6
+Valle Gran Rey,38049,2022,2022,Otros ingresos,OTROS_INGRESOS,22.1,Valle Gran Rey,"Gomera, La ",51.6
+Valle Gran Rey,38049,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,3.8,Valle Gran Rey,"Gomera, La ",51.6
+Valle Gran Rey,38049,2022,2022,Pensiones,PENSIONES,19.9,Valle Gran Rey,"Gomera, La ",51.6
+Valle Gran Rey,38049,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.7,Valle Gran Rey,"Gomera, La ",51.6
+Vallehermoso,38050,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,51.1,Vallehermoso,"Gomera, La ",51.1
+Vallehermoso,38050,2022,2022,Otros ingresos,OTROS_INGRESOS,13.1,Vallehermoso,"Gomera, La ",51.1
+Vallehermoso,38050,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,4.1,Vallehermoso,"Gomera, La ",51.1
+Vallehermoso,38050,2022,2022,Pensiones,PENSIONES,28.3,Vallehermoso,"Gomera, La ",51.1
+Vallehermoso,38050,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,3.4,Vallehermoso,"Gomera, La ",51.1
+Barlovento,38007,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,51.4,Barlovento,"Palma, La ",51.4
+Barlovento,38007,2022,2022,Otros ingresos,OTROS_INGRESOS,18.8,Barlovento,"Palma, La ",51.4
+Barlovento,38007,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,3.9,Barlovento,"Palma, La ",51.4
+Barlovento,38007,2022,2022,Pensiones,PENSIONES,23.4,Barlovento,"Palma, La ",51.4
+Barlovento,38007,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.5,Barlovento,"Palma, La ",51.4
+Breña Alta,38008,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,64.6,Breña Alta,"Palma, La ",64.6
+Breña Alta,38008,2022,2022,Otros ingresos,OTROS_INGRESOS,12.8,Breña Alta,"Palma, La ",64.6
+Breña Alta,38008,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,3.2,Breña Alta,"Palma, La ",64.6
+Breña Alta,38008,2022,2022,Pensiones,PENSIONES,17.3,Breña Alta,"Palma, La ",64.6
+Breña Alta,38008,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.2,Breña Alta,"Palma, La ",64.6
+Breña Baja,38009,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,67.1,Breña Baja,"Palma, La ",67.1
+Breña Baja,38009,2022,2022,Otros ingresos,OTROS_INGRESOS,12.3,Breña Baja,"Palma, La ",67.1
+Breña Baja,38009,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,3.2,Breña Baja,"Palma, La ",67.1
+Breña Baja,38009,2022,2022,Pensiones,PENSIONES,15.5,Breña Baja,"Palma, La ",67.1
+Breña Baja,38009,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,1.9,Breña Baja,"Palma, La ",67.1
+Fuencaliente de La Palma,38014,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,57.0,Fuencaliente de la Palma,"Palma, La ",57.0
+Fuencaliente de La Palma,38014,2022,2022,Otros ingresos,OTROS_INGRESOS,13.1,Fuencaliente de la Palma,"Palma, La ",57.0
+Fuencaliente de La Palma,38014,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,4.4,Fuencaliente de la Palma,"Palma, La ",57.0
+Fuencaliente de La Palma,38014,2022,2022,Pensiones,PENSIONES,22.0,Fuencaliente de la Palma,"Palma, La ",57.0
+Fuencaliente de La Palma,38014,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,3.5,Fuencaliente de la Palma,"Palma, La ",57.0
+Garafía,38016,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,49.1,Garafía,"Palma, La ",49.1
+Garafía,38016,2022,2022,Otros ingresos,OTROS_INGRESOS,13.5,Garafía,"Palma, La ",49.1
+Garafía,38016,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,4.6,Garafía,"Palma, La ",49.1
+Garafía,38016,2022,2022,Pensiones,PENSIONES,29.2,Garafía,"Palma, La ",49.1
+Garafía,38016,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,3.6,Garafía,"Palma, La ",49.1
+Los Llanos de Aridane,38024,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,54.7,"Llanos de Aridane, Los","Palma, La ",54.7
+Los Llanos de Aridane,38024,2022,2022,Otros ingresos,OTROS_INGRESOS,15.6,"Llanos de Aridane, Los","Palma, La ",54.7
+Los Llanos de Aridane,38024,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,7.4,"Llanos de Aridane, Los","Palma, La ",54.7
+Los Llanos de Aridane,38024,2022,2022,Pensiones,PENSIONES,17.5,"Llanos de Aridane, Los","Palma, La ",54.7
+Los Llanos de Aridane,38024,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,4.8,"Llanos de Aridane, Los","Palma, La ",54.7
+El Paso,38027,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,53.7,"Paso, El","Palma, La ",53.7
+El Paso,38027,2022,2022,Otros ingresos,OTROS_INGRESOS,17.3,"Paso, El","Palma, La ",53.7
+El Paso,38027,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,6.0,"Paso, El","Palma, La ",53.7
+El Paso,38027,2022,2022,Pensiones,PENSIONES,18.9,"Paso, El","Palma, La ",53.7
+El Paso,38027,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,4.2,"Paso, El","Palma, La ",53.7
+Puntagorda,38029,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,55.7,Puntagorda,"Palma, La ",55.7
+Puntagorda,38029,2022,2022,Otros ingresos,OTROS_INGRESOS,16.9,Puntagorda,"Palma, La ",55.7
+Puntagorda,38029,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,3.9,Puntagorda,"Palma, La ",55.7
+Puntagorda,38029,2022,2022,Pensiones,PENSIONES,19.7,Puntagorda,"Palma, La ",55.7
+Puntagorda,38029,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,3.9,Puntagorda,"Palma, La ",55.7
+Puntallana,38030,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,58.9,Puntallana,"Palma, La ",58.9
+Puntallana,38030,2022,2022,Otros ingresos,OTROS_INGRESOS,14.3,Puntallana,"Palma, La ",58.9
+Puntallana,38030,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,3.5,Puntallana,"Palma, La ",58.9
+Puntallana,38030,2022,2022,Pensiones,PENSIONES,20.9,Puntallana,"Palma, La ",58.9
+Puntallana,38030,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.4,Puntallana,"Palma, La ",58.9
+San Andrés y Sauces,38033,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,52.8,San Andrés y Sauces,"Palma, La ",52.8
+San Andrés y Sauces,38033,2022,2022,Otros ingresos,OTROS_INGRESOS,18.3,San Andrés y Sauces,"Palma, La ",52.8
+San Andrés y Sauces,38033,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,3.9,San Andrés y Sauces,"Palma, La ",52.8
+San Andrés y Sauces,38033,2022,2022,Pensiones,PENSIONES,23.0,San Andrés y Sauces,"Palma, La ",52.8
+San Andrés y Sauces,38033,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.1,San Andrés y Sauces,"Palma, La ",52.8
+Santa Cruz de La Palma,38037,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,58.8,Santa Cruz de la Palma,"Palma, La ",58.8
+Santa Cruz de La Palma,38037,2022,2022,Otros ingresos,OTROS_INGRESOS,12.1,Santa Cruz de la Palma,"Palma, La ",58.8
+Santa Cruz de La Palma,38037,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,3.6,Santa Cruz de la Palma,"Palma, La ",58.8
+Santa Cruz de La Palma,38037,2022,2022,Pensiones,PENSIONES,23.4,Santa Cruz de la Palma,"Palma, La ",58.8
+Santa Cruz de La Palma,38037,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.1,Santa Cruz de la Palma,"Palma, La ",58.8
+Tazacorte,38045,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,52.6,Tazacorte,"Palma, La ",52.6
+Tazacorte,38045,2022,2022,Otros ingresos,OTROS_INGRESOS,13.1,Tazacorte,"Palma, La ",52.6
+Tazacorte,38045,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,7.3,Tazacorte,"Palma, La ",52.6
+Tazacorte,38045,2022,2022,Pensiones,PENSIONES,21.1,Tazacorte,"Palma, La ",52.6
+Tazacorte,38045,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,5.9,Tazacorte,"Palma, La ",52.6
+Tijarafe,38047,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,48.1,Tijarafe,"Palma, La ",48.1
+Tijarafe,38047,2022,2022,Otros ingresos,OTROS_INGRESOS,23.6,Tijarafe,"Palma, La ",48.1
+Tijarafe,38047,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,4.1,Tijarafe,"Palma, La ",48.1
+Tijarafe,38047,2022,2022,Pensiones,PENSIONES,20.8,Tijarafe,"Palma, La ",48.1
+Tijarafe,38047,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,3.5,Tijarafe,"Palma, La ",48.1
+Villa de Mazo,38053,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,62.3,Villa de Mazo,"Palma, La ",62.3
+Villa de Mazo,38053,2022,2022,Otros ingresos,OTROS_INGRESOS,12.6,Villa de Mazo,"Palma, La ",62.3
+Villa de Mazo,38053,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,3.3,Villa de Mazo,"Palma, La ",62.3
+Villa de Mazo,38053,2022,2022,Pensiones,PENSIONES,19.3,Villa de Mazo,"Palma, La ",62.3
+Villa de Mazo,38053,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.4,Villa de Mazo,"Palma, La ",62.3
+Frontera,38013,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,58.8,Frontera,"Hierro, El ",58.8
+Frontera,38013,2022,2022,Otros ingresos,OTROS_INGRESOS,14.5,Frontera,"Hierro, El ",58.8
+Frontera,38013,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,4.3,Frontera,"Hierro, El ",58.8
+Frontera,38013,2022,2022,Pensiones,PENSIONES,19.2,Frontera,"Hierro, El ",58.8
+Frontera,38013,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,3.2,Frontera,"Hierro, El ",58.8
+Valverde,38048,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,61.6,Valverde,"Hierro, El ",61.6
+Valverde,38048,2022,2022,Otros ingresos,OTROS_INGRESOS,11.0,Valverde,"Hierro, El ",61.6
+Valverde,38048,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,3.6,Valverde,"Hierro, El ",61.6
+Valverde,38048,2022,2022,Pensiones,PENSIONES,21.4,Valverde,"Hierro, El ",61.6
+Valverde,38048,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.4,Valverde,"Hierro, El ",61.6
+El Pinar de El Hierro,38901,2022,2022,Sueldos y salarios,SUELDOS_SALARIOS,60.0,"Pinar de El Hierro, El","Hierro, El ",60.0
+El Pinar de El Hierro,38901,2022,2022,Otros ingresos,OTROS_INGRESOS,12.8,"Pinar de El Hierro, El","Hierro, El ",60.0
+El Pinar de El Hierro,38901,2022,2022,Otras prestaciones,OTRAS_PRESTACIONES,3.8,"Pinar de El Hierro, El","Hierro, El ",60.0
+El Pinar de El Hierro,38901,2022,2022,Pensiones,PENSIONES,20.7,"Pinar de El Hierro, El","Hierro, El ",60.0
+El Pinar de El Hierro,38901,2022,2022,Prestaciones por desempleo,PRESTACIONES_DESEMPLEO,2.8,"Pinar de El Hierro, El","Hierro, El ",60.0
