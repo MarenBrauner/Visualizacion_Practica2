@@ -1,4 +1,5 @@
 import re, requests, pandas as pd
+import subprocess
 from dagster import asset, asset_check, Output, AssetCheckResult, MetadataValue
 from plotnine import *
 
@@ -611,7 +612,7 @@ def generar_plot(df):
 
     CONTROL DE ETIQUETAS (LITERALES):
     Usa labs() exactamente con estos textos:
-    - title='Evolución de Estudiantes por Año y Sexo'
+    - title='Evolución de Estudiantes por Año y Sexo - Test'
     - subtitle='Análisis por Islas (2021-2023)'
     - x='Año'
     - y='Nº de Estudiantes'
@@ -686,3 +687,40 @@ def grafico_estudios_por_sexo(estudios_unificados_islas):
     grafico.save("grafico_barras_estudios_sexo.png")
     return "Gráfico de distribución de estudios por sexo generado con éxito"
 """
+
+# --- Despliegue automático en GitHub ---
+
+@asset(deps=["vis_estudios_sexo", "vis_barras_municipios", "vis_lineas_renta"])
+# El uso de deps=[...] granatiza que este paso solo ocurra después de que todos 
+# los gráficos se hayan guardado en el disco local
+def publicar_a_github():
+    """
+    Asset que automatiza el envío de los gráficos generados a GitHub 
+    para su publicación en GitHub Pages.
+    """
+    try:
+        # 1. Forzar a Git a que reconozca que estamos en la rama de trabajo
+        subprocess.run(["git", "checkout", "practica-4-ia-automatizacion"], check=True)
+
+        # 2. Añadir los cambios
+        subprocess.run(["git", "add", "*.png"], check=True)
+        
+        # 3. Commit
+        subprocess.run(["git", "commit", "-m", "Actualización automática de gráficos", "--allow-empty"], check=True)
+        
+        # 4. PUSH ESPECÍFICO
+        # Esto obliga a subir los cambios a 'practica-4-ia-automatizacion' en el servidor
+        subprocess.run(["git", "push", "origin", "practica-4-ia-automatizacion"], check=True)
+        
+        base_url = "https://marenbrauner.github.io/Visualizacion_Practica2/"
+        print("Sincronización forzada con GitHub completada con éxito.")
+
+        # Devolvemos un diccionario con las URLs directas a cada archivo
+        return {
+            "renta_lineas": f"{base_url}grafico_lineas_renta_ia.png",
+            "renta_municipios": f"{base_url}grafico_barras_municipios_ia.png",
+            "estudios_sexo": f"{base_url}grafico_estudios_sexo_ia.png"
+        }
+        
+    except subprocess.CalledProcessError as e:
+        return f"Error en la automatización de Git: {e}"
