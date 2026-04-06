@@ -1,7 +1,23 @@
-import pandas as pd
-from dagster import asset, asset_check, AssetCheckResult, MetadataValue
+import re, requests, pandas as pd
+from dagster import asset, asset_check, Output, AssetCheckResult, MetadataValue
 from plotnine import *
 
+
+# Función de soporte que permite llamar a la IA desde cualquier gráfico con una sola línea
+# sin necesidad de repetir el mismo código de requests y re.search
+def pedir_codigo_a_ia(template_ia):
+    url = "http://gpu1.esit.ull.es:4000/v1/chat/completions"
+    headers = {"Authorization": "Bearer sk-1234"}
+    try:
+        response = requests.post(url, json=template_ia, headers=headers, timeout=60)
+        response.raise_for_status()
+        codigo_raw = response.json()['choices'][0]['message']['content']
+        match = re.search(r"```python\s+(.*?)\s+```", codigo_raw, re.DOTALL)
+        return match.group(1) if match else codigo_raw.strip()
+    except Exception as e:
+        return f"# Error en la petición: {e}"
+
+# ---------------------------------------------------------------------------
 @asset
 def renta_raw():
     """Carga del dataset original"""
@@ -133,8 +149,77 @@ def check_continuidad_temporal(renta_clean):
 
 
 @asset
+def prompt_lineas_renta(renta_clean):
+    template_tecnico = """
+def generar_plot(df):
+    # plot = (ggplot(df, aes(...)) + geom_...)
+    # return plot
+"""
+    system_content = (
+        "Eres un experto en Plotnine. Tu tarea es completar el template con código ejecutable. "
+        f"Estructura obligatoria: {template_tecnico}."
+    )
+    
+    descripcion_grafico = """
+    REGLAS ESTRICTAS DE DATOS:
+    1. Filtrar solo las 7 islas: ['Lanzarote', 'Fuerteventura', 'Gran Canaria', 'Tenerife', 'La Gomera', 'La Palma', 'El Hierro'].
+    2. Convertir 'TIME_PERIOD' a int.
+
+    REGLAS DE DISEÑO (ETIQUETAS Y ESTILO):
+    - Estéticas: x='TIME_PERIOD', y='OBS_VALUE', color='MEDIDAS', group='MEDIDAS'.
+    
+    - CONTROL DE ETIQUETAS (OBLIGATORIO): 
+      Usa la función labs() exactamente así:
+      + labs(title='Distribución de la Renta por Isla', 
+             x='Año', 
+             y='Valor (%)', 
+             color='Tipo de Renta')
+
+    - GEOMETRÍA Y FACETAS:
+      + geom_line(size=1) + geom_point(size=1.5)
+      + facet_wrap('~TERRITORIO', ncol=3)
+
+    - TEMA Y FORMATO:
+      + theme_minimal()
+      + theme(figure_size=(12, 10),
+              axis_text_x=element_text(rotation=45),
+              strip_text=element_text(face='bold'))
+    """
+
+    return {
+        "model": "ollama/llama3.1:8b",
+        "messages": [
+            {"role": "system", "content": system_content},
+            {"role": "user", "content": f"Basándote en estas reglas, completa el template:\n{descripcion_grafico}"}
+        ],
+        "temperature": 0, # Bajamos a 0 para máxima precisión
+        "stream": False
+    }
+
+
+@asset
+def vis_lineas_renta(prompt_lineas_renta, renta_clean):
+    codigo = pedir_codigo_a_ia(prompt_lineas_renta)
+
+    # if "groupby(['TIME_PERIOD', 'MEDIDAS'])" in codigo:
+    #     codigo = codigo.replace(
+    #         "groupby(['TIME_PERIOD', 'MEDIDAS'])",
+    #         "groupby(['TIME_PERIOD', 'MEDIDAS', 'TERRITORIO'])"
+    #     )
+    #     print("Código corregido automáticamente")
+
+    entorno = globals().copy()
+    entorno.update({k: v for k, v in globals().items() if not k.startswith('_')})
+    entorno['df'] = renta_clean
+    print(codigo)
+    exec(codigo, entorno)
+    grafico = entorno['generar_plot'](renta_clean)
+    grafico.save("grafico_lineas_renta_ia.png")
+    return "OK"
+
+
+"""@asset
 def grafico_evolucion_islas(renta_clean):
-    """Generación del gráfico de líneas"""
     lista_islas = [
         'Lanzarote', 'Fuerteventura', 'Gran Canaria', 
         'Tenerife', 'La Gomera', 'La Palma', 'El Hierro'
@@ -167,7 +252,7 @@ def grafico_evolucion_islas(renta_clean):
 
 @asset_check(asset=grafico_evolucion_islas)
 def check_mapeo_color_en_grafico(grafico_evolucion_islas):
-    """Verifica que el gráfico tenga correctamente definido el mapeo de color y que esté basado en MEDIDAS."""
+    # Verifica que el gráfico tenga correctamente definido el mapeo de color y que esté basado en MEDIDAS.
     # Verificar que existe mapeo de color
     mapping = grafico_evolucion_islas.mapping
     color_mapping = mapping.get("color", None)
@@ -190,6 +275,9 @@ def check_mapeo_color_en_grafico(grafico_evolucion_islas):
             "impacto": "Si el color no está mapeado a MEDIDAS, se pierde diferenciación visual entre tipos de renta."
         }
     )  
+"""
+
+
 
 # --- ASSETS DE CÓDIGOS ---
 @asset
@@ -303,8 +391,81 @@ def check_orden_por_sueldos(renta_municipios_unificada):
 
 
 @asset
+def prompt_barras_municipios(renta_municipios_unificada):
+    # Definimos el template y el código de ordenación exacto
+    template = "def generar_plot(df):\n    # Código\n    return plot"
+    
+    codigo_ordenacion = """
+       nombres_ordenados = (
+           df[df['MEDIDAS'] == 'Sueldos y salarios']
+           .sort_values('OBS_VALUE', ascending=True)['NOMBRE']
+           .unique()
+       )
+       df['NOMBRE'] = pd.Categorical(df['NOMBRE'], categories=nombres_ordenados)
+    """
+
+    descripcion = f"""
+    TAREA: Réplica visual exacta del gráfico apilado.
+    
+    INSTRUCCIONES DE DATOS (OBLIGATORIO):
+    - Usa exactamente este código para ordenar:
+    {codigo_ordenacion}
+    - PROHIBIDO FILTRAR MEDIDAS.
+
+    INSTRUCCIONES DE DISEÑO (OBLIGATORIO):
+    - aes(x='NOMBRE', y='OBS_VALUE', fill='MEDIDAS')
+    - geom_col(position='fill', width=0.8) + coord_flip()
+    - facet_wrap('~ISLA', scales='free_y', ncol=3)
+    - scale_y_continuous(labels=lambda l: [f'{{v:.0%}}' for v in l])
+    - scale_fill_brewer(type='qual', palette='Set2')  # Mantiene los colores
+
+    CONTROL DE ETIQUETAS LEGIBLES (MUY IMPORTANTE):
+    - Usa labs() para forzar estos nombres:
+        labs(title='Distribución de la Renta por Municipio (2022)',
+             subtitle='Municipios ordenados por volumen de Sueldos y Salarios',
+             x='Municipio',  # En el tuyo pone 'NOMBRE'
+             y='Proporción', # En el tuyo pone 'OBS_VALUE'
+             fill='Origen de Renta') # En el tuyo pone 'MEDIDAS'
+
+    TEMA Y FORMATO (ESTILO EXACTO):
+    - theme_minimal()
+    - theme(
+        figure_size=(15, 25),
+        legend_position='bottom', # Leyenda abajo y centrada
+        plot_title=element_text(face='bold', size=16),
+        strip_text=element_text(face='bold', size=12),
+        axis_text_y=element_text(face='bold', size=10), # Nombres de municipios en NEGRIBA
+        panel_grid_major_y=element_blank()  # Limpieza de líneas horizontales
+    )
+
+    RESPUESTA: Devuelve SOLO el código Python. Empieza en 'def generar_plot(df):'.
+    """
+
+    return {
+        "model": "ollama/llama3.1:8b",
+        "messages": [
+            {"role": "system", "content": "Eres un experto en Plotnine. Tu prioridad es la fidelidad visual y el uso de negritas en textos y etiquetas legibles con labs(). No inventes código."},
+            {"role": "user", "content": descripcion}
+        ],
+        "temperature": 0,
+        "stream": False
+    }
+
+@asset
+def vis_barras_municipios(prompt_barras_municipios, renta_municipios_unificada):
+    codigo = pedir_codigo_a_ia(prompt_barras_municipios)
+    entorno = globals().copy()
+    entorno['df'] = renta_municipios_unificada
+    exec(codigo, entorno)
+    grafico = entorno['generar_plot'](renta_municipios_unificada)
+    grafico.save("grafico_barras_municipios_ia.png", limitsize=False)
+    return "OK"
+
+
+"""
+@asset
 def grafico_distribucion_municipios(renta_municipios_unificada):
-    """Genera el gráfico de barras apiladas al 100% ordenado por sueldos"""
+    # Genera el gráfico de barras apiladas al 100% ordenado por sueldos
     df_plot = renta_municipios_unificada
     
     grafico = (
@@ -332,6 +493,7 @@ def grafico_distribucion_municipios(renta_municipios_unificada):
     
     grafico.save("grafico_barras_municipios.png", limitsize=False)
     return "Gráfico generado con éxito"
+"""
 
 
 # --- ASSETS DE ESTUDIOS ---
@@ -423,9 +585,76 @@ def check_contraste_sexo(estudios_unificados_islas):
         }
     )
 
+
+@asset
+def prompt_estudios_sexo(estudios_unificados_islas):
+    template_tecnico = """
+def generar_plot(df):
+    # plot = (ggplot(df, aes(...)) + geom_...)
+    # return plot
+"""
+    system_content = (
+        "Eres un experto en Plotnine y Gramática de Gráficos. "
+        "Tu objetivo es replicar un gráfico de barras agrupadas con un diseño profesional y limpio."
+    )
+    
+    descripcion_grafico = """
+    REGLAS DE PREPROCESAMIENTO:
+    1. Agrupar el dataframe por 'Año', 'Sexo' e 'ISLA', sumando la columna 'Total'.
+    2. Asegurarse de que 'Año' se trate como factor o cadena para evitar decimales en el eje X.
+
+    REGLAS DE DISEÑO OBLIGATORIAS (ESTILO EXACTO):
+    - aes: x='Año', y='Total', fill='Sexo'
+    - Geometría: geom_col(position='dodge')
+    - Facetas: facet_wrap('~ISLA', scales='free_y', ncol=3)
+    - Colores Manuales: scale_fill_manual(values={'Hombres': '#4C72B0', 'Mujeres': '#DD8452'})
+
+    CONTROL DE ETIQUETAS (LITERALES):
+    Usa labs() exactamente con estos textos:
+    - title='Evolución de Estudiantes por Año y Sexo'
+    - subtitle='Análisis por Islas (2021-2023)'
+    - x='Año'
+    - y='Nº de Estudiantes'
+    - fill='Sexo'
+
+    TEMA Y ESTÉTICA (SISTEMA GESTALT):
+    - theme_minimal()
+    - theme(
+        figure_size=(15, 10),
+        legend_position='bottom',
+        plot_title=element_text(face='bold', size=16),  # Título en negrita
+        strip_text=element_text(face='bold', size=12), # Nombres de islas en negrita
+        panel_grid_minor=element_blank(),              # Limpieza visual
+        axis_text=element_text(size=10)
+    )
+    """
+
+    return {
+        "model": "ollama/llama3.1:8b",
+        "messages": [
+            {"role": "system", "content": system_content},
+            {"role": "user", "content": f"Basándote en estas reglas y usando el template {template_tecnico}, genera el código:\n{descripcion_grafico}"}
+        ],
+        "temperature": 0,
+        "stream": False
+    }
+
+
+@asset
+def vis_estudios_sexo(prompt_estudios_sexo, estudios_unificados_islas):
+    codigo = pedir_codigo_a_ia(prompt_estudios_sexo)
+    entorno = globals().copy()
+    entorno['df'] = estudios_unificados_islas
+    exec(codigo, entorno)
+    grafico = entorno['generar_plot'](estudios_unificados_islas)
+    grafico.save("grafico_estudios_sexo_ia.png")
+    return "OK"
+
+
+"""
 @asset
 def grafico_estudios_por_sexo(estudios_unificados_islas):
-    """Generación del gráfico de barras agrupadas por Año y Sexo (Hito 7)"""
+    # Generación del gráfico de barras agrupadas por Año y Sexo
     df = estudios_unificados_islas
     
     if df.empty:
@@ -456,3 +685,4 @@ def grafico_estudios_por_sexo(estudios_unificados_islas):
     
     grafico.save("grafico_barras_estudios_sexo.png")
     return "Gráfico de distribución de estudios por sexo generado con éxito"
+"""
